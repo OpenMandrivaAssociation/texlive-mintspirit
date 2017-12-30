@@ -5,8 +5,8 @@
 # catalog-license ofl
 # catalog-version undef
 Name:		texlive-mintspirit
-Version:	20131103
-Release:	9
+Version:	20170414
+Release:	1
 Summary:	LaTeX support for MintSpirit font families
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/mintspirit
