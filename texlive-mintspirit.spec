@@ -5,7 +5,7 @@
 # catalog-license ofl
 # catalog-version undef
 Name:		texlive-mintspirit
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	LaTeX support for MintSpirit font families
 Group:		Publishing
