@@ -1,18 +1,12 @@
-# revision 32069
-# category Package
-# catalog-ctan /fonts/mintspirit
-# catalog-date 2013-11-03 23:53:16 +0100
-# catalog-license ofl
-# catalog-version undef
 Name:		texlive-mintspirit
-Version:	20190228
+Version:	64461
 Release:	1
 Summary:	LaTeX support for MintSpirit font families
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/mintspirit
 License:	OFL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ for use as a system font on a Linux Mint system. The No. 2
 variant provides more conventional shapes for some glyphs.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -593,7 +587,7 @@ variant provides more conventional shapes for some glyphs.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
