@@ -1,6 +1,6 @@
 Name:		texlive-mintspirit
 Version:	64461
-Release:	1
+Release:	2
 Summary:	LaTeX support for MintSpirit font families
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/mintspirit
