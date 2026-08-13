@@ -12,7 +12,8 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.r%{tl
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/mintspirit.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The package provides LaTeX, pdfLaTeX, XeLaTeX and LuaLaTeX support for
@@ -21,3 +22,10 @@ Harendal. MintSpirit was originally designed for use as a system font on
 a Linux Mint system. The No. 2 variant provides more conventional shapes
 for some glyphs.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from mintspirit:
+Map mintspirit.map
+TL_DROPIN_EOF
